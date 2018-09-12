@@ -1,5 +1,6 @@
 var friends = [
     {
+        "routeName": "Hundley",
         "name": "Hundley",
         "photo": "http://images.wikia.com/curious-george/images/9/98/Hundley_rotator_new.jpg",
         "scores": [
@@ -16,6 +17,7 @@ var friends = [
         ]
     },
     {
+        "routeName": "Mudge",
         "name": "Mudge",
         "photo": "https://tse4.mm.bing.net/th?id=OIP.tMEK47wck-CUTetONxmhCAHaFj&pid=15.1&P=0&w=207&h=156",
         "scores": [
@@ -32,6 +34,7 @@ var friends = [
         ]
     },
     {
+        "routeName": "Ribsy",
         "name": "Ribsy Huggins",
         "photo": "http://kinderbooks.net/wp-content/uploads/2015/01/Henry-and-Ribsy.gif",
         "scores": [
@@ -48,6 +51,7 @@ var friends = [
         ]
     },
     {
+        "routeName": "Benji",
         "name": "Benji",
         "photo": "http://fboverlays.com/pages/assets/frontend/img/previewImage.png",
         "scores": [
@@ -64,6 +68,7 @@ var friends = [
         ]
     },
         {
+        "routeName": "Moon-Moon",
         "name": "Moon Moon",
         "photo": "http://cdn.marketplace.akc.org/media/100819/1493482556_3996_4388.jpg",
         "scores": [
@@ -80,6 +85,7 @@ var friends = [
         ]
     },
     {
+        "routeName": "Scooby-Doo",
         "name": "Scooby Doo",
         "photo": "http://2.bp.blogspot.com/-zw8rpaCmdEA/UPqeu9PGdJI/AAAAAAAAPto/rvPvTw5mQuU/s1600/scooby_doo.jpg",
         "scores": [
@@ -95,7 +101,7 @@ var friends = [
             "1"
         ]
     },
-    {
+    {   "routeName": "Fluffy",
         "name": "Fluffy McPoofball",
         "photo": "https://i2.wp.com/pixelvulture.com/wp-content/uploads/2015/05/Famous-Dogs-of-Facebook-3.jpg",
         "scores": [

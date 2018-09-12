@@ -13,6 +13,10 @@ var PORT = 3030;
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+//This is to use my CSS
+app.use(express.static('app/public'));
+
+//returning the function and the additional parantheses are calling the function
 require(path.join(__dirname, './app/routing/htmlRoutes'))(app);
 require(path.join(__dirname, './app/routing/apiRoutes'))(app);
 
