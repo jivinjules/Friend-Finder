@@ -2,6 +2,7 @@ var friends = require('../data/friends.js');
 var path = require("path");
 
 //I think I need to export this whole thing
+//Yep, I do
 // Displays friends
 module.exports = function(app) {
 app.get("/api/friends/:friend", function (req, res) {
@@ -31,23 +32,26 @@ app.post("/api/friends", function (req, res) {
 var bestMatch = {
     name: "",
     photo: "",
-    friendDifference: 1000
+    //This is just going to be a comparison number
+    friendDifference: 5000
 };
 
-// Here we take the result of the user's survey POST and parse it.
+// This matches the object from survey.html
 var newFriend 	= req.body;
-var userScores 	= newFriend.scores;
+//This gets the scores from the object
+var newFriendScores = newFriend.scores;
 
+//This will be the diff btwn two users
 var totalDifference = 0;
 
-// Loop through all the friend possibilities in the database. 
+// Loop through all the friends. 
 for  (var i=0; i< friends.length; i++) {
 
-    // Loop through all the scores of each friend
+    // Loop again through all the scores of each friend
     for (var j=0; j< friends[i].scores[j]; j++){
 
         // abs is used to get the absolute value, so no negatives
-        totalDifference += Math.abs(parseInt(userScores[j]) - parseInt(friends[i].scores[j]));
+        totalDifference += Math.abs(parseInt(newFriendScores[j]) - parseInt(friends[i].scores[j]));
 
         // If the sum of differences is less then the differences of the current "best match"
         if (totalDifference <= bestMatch.friendDifference){
@@ -60,11 +64,11 @@ for  (var i=0; i< friends.length; i++) {
     }
 }
 
-// Finally save the user's data to the database (this has to happen AFTER the check. otherwise,
-// the database will always return that the user is the user's best friend).
+//push the New Friend into the array of friends for the api
 friends.push(newFriend);
 
-// Return a JSON with the user's bestMatch. This will be used by the HTML in the next page. 
+// To be used in the popup
+
 res.json(bestMatch);
 
 });

@@ -12,8 +12,8 @@ button {
     color:rgba(9, 4, 39, 0.952); 
 }
 
-footer {
-    background-image: URL(/crowd); 
+#home-footer {
+    background-image: URL(./crowd.jpg); 
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: 100%; 
@@ -25,4 +25,27 @@ footer {
     background:white    ;
     color: black;
     border: none;
+}
+
+#submit {
+background: black;
+color: white;
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+
+#survey-container {
+    background: url('./survey.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Domine', serif;
+}
+
+#footer {
+    color: black;
 }

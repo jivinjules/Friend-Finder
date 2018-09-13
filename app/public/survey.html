@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./style.css">
 
     <!--Linking google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|M+PLUS+1p|Rammetto+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Domine|Rammetto+One" rel="stylesheet">
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -30,7 +30,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="container" id = "survey-container">
 
         <h2>Answer 10 short questions to find compatability</h2>
         <hr>
@@ -52,11 +52,11 @@
         <h4>You would rather go to the beach for vacation than the mountains.</h4>
         <select class="chosen-select" id="q1">
             <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1">1 (Definitely Mountains!)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
+            <option value="5">5 (Definitely Beach!)</option>
         </select>
 
         <h3>
@@ -65,11 +65,11 @@
         <h4>You consider yourself an introvert.</h4>
         <select class="chosen-select" id="q2">
             <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1">1 (I'm an Introvert.)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
+            <option value="5">5 (I'm an extrovert)</option>
         </select>
 
 
@@ -121,11 +121,11 @@
         <h4>It is more important to be kind than to be right.</h4>
         <select class="chosen-select" id="q6">
             <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1">1 (I'd rather be kind.)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
+            <option value="5">5 (I'd rather be right)</option>
         </select>
 
 
@@ -148,11 +148,11 @@
         <h4>People refer to you as "logical" more than "creative."</h4>
         <select class="chosen-select" id="q8">
             <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1">1 (I'm more logical.)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
+            <option value="5">5 (I'm more creative.)</option>
         </select>
 
         <h3>
@@ -161,11 +161,11 @@
         <h4>The Marvel characters would defeat DC Comics characters.</h4>
         <select class="chosen-select" id="q9">
             <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1">1 (Go Marvel!)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
+            <option value="5">5 (Go DC Comics!)</option>
         </select>
 
         <h3>
@@ -174,18 +174,18 @@
         <h4>Being outdoors is better than being indoors.</h4>
         <select class="chosen-select" id="q10">
             <option value=""></option>
-            <option value="1">1 (Strongly Disagree)</option>
+            <option value="1">1 (I'd rather be outdoors!)</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
-            <option value="5">5 (Strongly Agree)</option>
+            <option value="5">5 (I'd rather be indoors)</option>
         </select>
 
         <br>
         <br>
 
         <!-- Submit Button -->
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" style="background: #000">
+        <button type="submit" id ="submit" class="btn btn-primary btn-lg btn-block" id="submit">
             <i class="fa fa-check-circle" aria-hidden="true"></i>
             Submit</button>
 
@@ -193,8 +193,8 @@
         <footer class="footer">
             <div class="container">
                 <p>
-                    <a href="/api/friends">API Friends List</a> |
-                    <a href="https://github.com/jivinjules/Friend-Finder">GitHub Repo</a>
+                    <a id = "footer" href="/api/friends">API Friends List</a> |
+                    <a id = "footer" href="https://github.com/jivinjules/Friend-Finder">GitHub Repo</a>
                 </p>
             </div>
         </footer>
@@ -210,12 +210,12 @@
                 <div class="popupbox-header">
                     <button type="button" class="close" data-dismiss="popupbox">×</button>
                     <h2 class="popupbox-title">
-                        <strong>Best Match</strong>
+                        <strong>Your Best Match is...</strong>
                     </h2>
                 </div>
                 <div class="popupbox-body">
                     <h2 id="match-name"></h2>
-                    <img id="match-img" alt="" style="width:150px; height:150px">
+                    <img id="match-img" alt="No picture available">
                 </div>
                 <div class="popupbox-footer">
                     <button type="button" class="btn btn-default" data-dismiss="popupbox">Close</button>
