@@ -33,7 +33,7 @@ var bestMatch = {
     name: "",
     photo: "",
     //This is just going to be a comparison number
-    friendDifference: 5000
+    friendDifference: 1000
 };
 
 // This matches the object from survey.html

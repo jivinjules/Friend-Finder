@@ -2,7 +2,7 @@ var friends = [
     {
         "routeName": "Hundley",
         "name": "Hundley",
-        "photo": "http://images.wikia.com/curious-george/images/9/98/Hundley_rotator_new.jpg",
+        "photo": "http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/thumbs/hundley-curious-george-swings-into-spring-7.41_thumb.jpg",
         "scores": [
             "2",
             "3",
@@ -70,7 +70,7 @@ var friends = [
         {
         "routeName": "Moon-Moon",
         "name": "Moon Moon",
-        "photo": "http://cdn.marketplace.akc.org/media/100819/1493482556_3996_4388.jpg",
+        "photo": "https://dogdiscoveries.com/wp-content/uploads/2016/02/half-moon-eye-dog.png",
         "scores": [
             "2",
             "5",
@@ -87,7 +87,7 @@ var friends = [
     {
         "routeName": "Scooby-Doo",
         "name": "Scooby Doo",
-        "photo": "http://2.bp.blogspot.com/-zw8rpaCmdEA/UPqeu9PGdJI/AAAAAAAAPto/rvPvTw5mQuU/s1600/scooby_doo.jpg",
+        "photo": "http://4.bp.blogspot.com/-7eRXe84XK70/TyjHIVB5BOI/AAAAAAAAAO4/NcORVo-I8AA/s1600/Scooby+doo+cartoons.jpg",
         "scores": [
             "5",
             "4",
