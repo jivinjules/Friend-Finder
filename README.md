@@ -8,7 +8,7 @@ Friend Finder finds compatability among the user and different "friends," who ha
 Friend Finder was developed through Node.js and Express on the backend, and the front end consisting of HTML, CSS, Bootstrap, JavaScript, jQuery, Font Awesome, and Google Fonts.
 
 # Installation
-To install and run Friend-Finder, the following steps are necessary:
+To install and run Friend-Finder, the following steps are necessary on the terminal or gitbash:
 1. `git clone https://github.com/jivinjules/Friend-Finder.git`
 2. `npm install`
 3. `npm install express`
