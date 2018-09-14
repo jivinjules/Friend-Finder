@@ -9,9 +9,12 @@
 	// Survey page
 	app.get('/survey', function(req, res) {
 		res.sendFile(path.join(__dirname, '../public/survey.html'));
-    });
+		});
+		
 
-    app.get('/crowd', function(req, res) {
-		res.sendFile(path.join(__dirname, '../public/crowd.jpg'));
-    });
+
+
+    // app.get('/crowd', function(req, res) {
+		// res.sendFile(path.join(__dirname, '../../images/crowd.jpg'));
+    // });
 }

@@ -4,73 +4,66 @@ var path = require("path");
 //I think I need to export this whole thing
 //Yep, I do
 // Displays friends
-module.exports = function(app) {
-app.get("/api/friends/:friend", function (req, res) {
-    var chosen = req.params.friend;
+module.exports = function (app) {
+    app.get("/api/friends/:friend", function (req, res) {
+        var chosen = req.params.friend;
 
-    console.log(chosen);
+        console.log(chosen);
 
-    for (var i = 0; i < friends.length; i++) {
-        if (chosen === friends[i].routeName) {
-            return res.json(friends[i]);
+        for (var i = 0; i < friends.length; i++) {
+            if (chosen === friends[i].routeName) {
+                return res.json(friends[i]);
+            }
         }
-    }
-    return res.json(friends[i]);
-});
+        return res.json(friends[i]);
+    });
 
-// Displays all characters
-app.get("/api/friends", function(req, res) {
-    return res.json(friends);
-  });
+    // Displays all characters
+    app.get("/api/friends", function (req, res) {
+        return res.json(friends);
+    });
 
-//adds friends
-app.post("/api/friends", function (req, res) {
+    app.post("/api/friends", function (req, res) {
+        console.log(req.body.scores);
 
-//Comparing user with their best friend match 
+        // new Friend takes survey and info is added
+        var newFriend = req.body;
 
-//Object to hold the best match
-var bestMatch = {
-    name: "",
-    photo: "",
-    //This is just going to be a comparison number
-    friendDifference: 1000
+        // parseInt for scores
+        for (var i = 0; i < newFriend.scores.length; i++) {
+            newFriend.scores[i] = parseInt(newFriend.scores[i]);
+        }
+
+        // if two friends have the same score, their diff will be zero
+        //top score is 50 and lowest is 10 so largest difference is 40
+        //the closer they are to zero the closer the scores
+        var closestDifference = 0;
+        var biggestDifference = 40;
+
+        // Loop through the friends to get the scores
+        for (var i = 0; i < friends.length; i++) {
+
+
+            //Loop again through the scores
+            for (var j = 0; j < friends[i].scores.length; j++) {
+                var difference = Math.abs(newFriend.scores[j] - friends[i].scores[j]);
+
+            }
+
+
+            //I got this section below off of stackoverflow
+            // gives back one with min diff
+            if (difference < biggestDifference) {
+                //we change closest diff to i to loop through
+                closestDifference = i;
+                biggestDifference = difference;
+            }
+        }
+
+        // after finding match, add newFriend to friend array
+        friends.push(newFriend);
+
+        // send back to browser the best friend match
+        res.json(friends[closestDifference]);
+    });
 };
-
-// This matches the object from survey.html
-var newFriend 	= req.body;
-//This gets the scores from the object
-var newFriendScores = newFriend.scores;
-
-//This will be the diff btwn two users
-var totalDifference = 0;
-
-// Loop through all the friends. 
-for  (var i=0; i< friends.length; i++) {
-
-    // Loop again through all the scores of each friend
-    for (var j=0; j< friends[i].scores[j]; j++){
-
-        // abs is used to get the absolute value, so no negatives
-        totalDifference += Math.abs(parseInt(newFriendScores[j]) - parseInt(friends[i].scores[j]));
-
-        // If the sum of differences is less then the differences of the current "best match"
-        if (totalDifference <= bestMatch.friendDifference){
-
-            // Reset the bestMatch to be the new friend. 
-            bestMatch.name = friends[i].name;
-            bestMatch.photo = friends[i].photo;
-            bestMatch.friendDifference = totalDifference;
-        }
-    }
-}
-
-//push the New Friend into the array of friends for the api
-friends.push(newFriend);
-
-// To be used in the popup
-
-res.json(bestMatch);
-
-});
-
-}

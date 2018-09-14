@@ -2,7 +2,7 @@ var friends = [
     {
         "routeName": "Hundley",
         "name": "Hundley",
-        "photo": "http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/thumbs/hundley-curious-george-swings-into-spring-7.41_thumb.jpg",
+        "photo": "https://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/hundley-curious-george-a-very-monkey-christmas-66.jpg",
         "scores": [
             "2",
             "3",

@@ -11,7 +11,9 @@ var PORT = 3030;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.text());
 app.use(bodyParser.json());
+app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 
 //This is to use my CSS
 app.use(express.static('app/public'));
