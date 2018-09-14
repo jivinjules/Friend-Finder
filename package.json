@@ -1,0 +1,25 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "Friend Finder finds compatability among the user and different \"friends,\" who have previously submitted scores. To initialize Friend Finder, the user types in their name and uploads a picture and then answers 10 questions. Each question is scaled from 1-5. After pressing \"submit,\" Friend Finder calculates the score and compares scores with the friends who have previously answered. Friend-Finder operates similar to a \"dating app.\"",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jivinjules/Friend-Finder.git"
+  },
+  "author": "Julie Hodges",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jivinjules/Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/jivinjules/Friend-Finder#readme"
+}
