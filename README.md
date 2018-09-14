@@ -17,5 +17,5 @@ To install and run Friend-Finder, the following steps are necessary on the termi
 Once Friend Finder is installed it can be accessed through localhost:3030 and called with `node server.js` 
 
 ## Heroku
-coming...
+Friend-Finder is deployed on Heroku [here](https://infinite-river-79762.herokuapp.com/)
 
